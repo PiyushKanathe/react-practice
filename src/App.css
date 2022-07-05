@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.tabs {
+  display: inline;
+  margin-right: 10px;
+  border: 2px solid white;
+  padding: 2px;
+}
+
+.activeTabs {
+  display: inline;
+  margin-right: 10px;
+  border: 2px solid green;
+  padding: 2px;
+}
+
+.tabs:hover {
+  color: blueviolet;
+}
+
+.tabs:active {
+  color: cadetblue;
+}
