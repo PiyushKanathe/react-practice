@@ -1,5 +1,7 @@
 import './App.css';
 import DisplayComp from './DisplayListByAxios';
+import TabsComponent from './TabsComponent/TabsComponent';
+import InputComponent from './custom-hook/InputComponenet';
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
         </a>
       </header> */}
       <div>
-        <DisplayComp></DisplayComp>
+        {/* <DisplayComp></DisplayComp> */}
+        <TabsComponent />
+        <InputComponent />
       </div>
     </div>
   );
