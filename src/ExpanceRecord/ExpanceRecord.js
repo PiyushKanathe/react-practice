@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-         Expanse Trac ker
+         Expanse Tracker
         </p>
         <div>
           <select name="Month" onClick={(e)=>selectMonth(e.target.value)}>
