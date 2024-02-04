@@ -1,15 +1,17 @@
 import './App.css';
 import DisplayComp from './DisplayListByAxios';
 import TabsComponent from './TabsComponent/TabsComponent';
-import InputComponent from './custom-hook/InputComponenet';
+import InputComponent from './input-custom-hook/InputComponenet';
+import Counter from './counter-custom-hook/CounterComponant';
 
 function App() {
   return (
     <div className="App">
       <div>
         {/* <DisplayComp></DisplayComp> */}
-        <TabsComponent />
-        <InputComponent />
+        {/* <TabsComponent /> */}
+        {/* <InputComponent /> */}
+        <Counter /> 
       </div>
     </div>
   );
