@@ -6,7 +6,7 @@
 // button to remove a product from list.
 
 
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import ProductCard from "./ProductCard";
 
 const dataSet = [
@@ -32,7 +32,7 @@ const dataSet = [
   },
 ];
 
-export default function App() {
+export default function ToDoList() {
   const [data, setData] = useState(dataSet);
   const [productName, setProductName] = useState("");
   const [productCount, seProductCount] = useState(0);
@@ -68,16 +68,16 @@ export default function App() {
     setProductName(e.target.value);
   };
 
-  const deleteProduct = (name) => {
+  const deleteProduct = useCallback((name) => {
     setData(data.filter((prod) => prod.name !== name));
-  };
+  }, []) 
 
-  const updateProduct = (item) => {
+  const updateProduct = useCallback((item) => {
     setUpdateItem(item.name);
     setProductName(item.name);
     seProductCount(item.count);
     setProductPrice(item.price);
-  };
+  }, []);
 
   return (
     <div className="App">
@@ -99,6 +99,7 @@ export default function App() {
       <ul>
         {data.map((item) => (
           <ProductCard
+            key={item.name}
             item={item}
             deleteProd={deleteProduct}
             updateProd={updateProduct}

@@ -1,6 +1,8 @@
+import React from "react";
+
 const ProductCard = ({ item, deleteProd, updateProd }) => {
     return (
-      <li id={item.name}>
+      <li id={item.name} key={item.name}>
         {`${item.name} | ${item.count} |${item.price}  `}
         <button onClick={() => deleteProd(item.name)}>Delete</button>
         <button onClick={() => updateProd(item)}>Update</button>
@@ -8,5 +10,5 @@ const ProductCard = ({ item, deleteProd, updateProd }) => {
     );
   };
   
-  export default ProductCard;
+  export default React.memo(ProductCard);
   
