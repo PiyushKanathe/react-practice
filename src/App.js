@@ -3,15 +3,31 @@ import DisplayComp from './DisplayListByAxios';
 import TabsComponent from './TabsComponent/TabsComponent';
 import InputComponent from './input-custom-hook/InputComponenet';
 import Counter from './counter-custom-hook/CounterComponant';
+import FileStructure from './PrettyPrintJson/FileStructure';
 
 function App() {
+  let data = {
+    "root": {
+      "folder1": {
+        "file1.txt": "Content of file1",
+        "file2.txt": "Content of file2"
+      },
+      "folder2": {
+        "subfolder1": {
+          "file3.txt": "Content of file3"
+        }
+      },
+      "file4.txt": "Content of file4"
+    }
+  }
   return (
     <div className="App">
       <div>
         {/* <DisplayComp></DisplayComp> */}
         {/* <TabsComponent /> */}
         {/* <InputComponent /> */}
-        <Counter /> 
+        {/* <Counter />  */}
+        <FileStructure data={data} />
       </div>
     </div>
   );
